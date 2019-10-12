@@ -49,7 +49,7 @@ export default {
     };
   },
   props: {
-    addMovie: {
+    addNewMovie: {
       type: Function,
       required: true,
     }
@@ -83,7 +83,7 @@ export default {
         rating: this.rating,
         website: this.website
       };
-      this.addMovie(data);
+      this.addNewMovie(data);
       this.resetData();
     },
 

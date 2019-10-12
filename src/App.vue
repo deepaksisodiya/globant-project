@@ -1,27 +1,29 @@
 <template>
   <div>
-    <AddMovie />
+    <AddMovie :addNewMovie="addNewMovie" />
+    <ListMovie :movies="movies" />
   </div>
 </template>
 
 <script>
 import AddMovie from "./components/AddMovie.vue";
+import ListMovie from "./components/ListMovie.vue";
 
 export default {
   name: "app",
   components: {
-    AddMovie
+    AddMovie,
+    ListMovie
+  },
+  data() {
+    return {
+      movies: []
+    };
+  },
+  methods: {
+    addNewMovie(movie) {
+      this.movies.push(movie);
+    }
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
