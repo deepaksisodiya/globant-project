@@ -1,7 +1,8 @@
 <template>
   <div>
-    <AddMovie :addNewMovie="addNewMovie" />
-    <ListMovie :movies="movies" />
+    <button @click="toggleScreen">{{ buttonText }}</button>
+    <ListMovie :movies="movies" v-if="!onMovieListPage" />
+    <AddMovie :addNewMovie="addNewMovie" v-if="onMovieListPage" />
   </div>
 </template>
 
@@ -17,12 +18,22 @@ export default {
   },
   data() {
     return {
-      movies: []
+      movies: [],
+      onMovieListPage: false
     };
+  },
+  computed: {
+    buttonText() {
+      if (this.onMovieListPage) return "Go To Movies List";
+      return "Add Movie";
+    }
   },
   methods: {
     addNewMovie(movie) {
       this.movies.push(movie);
+    },
+    toggleScreen() {
+      this.onMovieListPage = !this.onMovieListPage;
     }
   }
 };
