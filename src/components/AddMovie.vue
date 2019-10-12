@@ -1,7 +1,14 @@
 <template>
   <div>
     <h1>Add Movie to list</h1>
-    <form>
+
+    <form @submit="checkForm">
+      <p v-if="errors.length">
+        <b>Please correct the following error(s):</b>
+        <ul>
+          <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
+        </ul>
+      </p>
       <p>
         <label for="movieName">Movie Name* </label>
         <input v-model="movieName" type="text" />
@@ -22,6 +29,9 @@
         <label for="website">Website </label>
         <input v-model="website" type="text" />
       </p>
+      <p>
+        <input type="submit" value="Submit" />
+      </p>
     </form>
   </div>
 </template>
@@ -31,11 +41,58 @@ export default {
   name: "AddMovie",
   data() {
     return {
-      movieName: "",
-      genre: "",
+      errors: [],
+      movieName: null,
+      genre: null,
       rating: null,
-      website: ""
+      website: null
     };
+  },
+  props: {
+    addMovie: {
+      type: Function,
+      required: true,
+    }
+  },
+  methods: {
+    checkForm: function(event) {
+      event.preventDefault();
+      this.errors = [];
+
+      if (!this.movieName) {
+        this.errors.push("Movie name is required");
+      }
+
+      if (!this.genre) {
+        this.errors.push("genre is required");
+      }
+
+      if (!this.rating) {
+        this.errors.push("rating is required");
+      }
+
+      if (!this.errors.length) {
+        this.addMovieToList();
+      }
+    },
+
+    addMovieToList() {
+      const data = {
+        movieName: this.movieName,
+        genre: this.genre,
+        rating: this.rating,
+        website: this.website
+      };
+      this.addMovie(data);
+      this.resetData();
+    },
+
+    resetData() {
+      this.movieName = null;
+      this.genre = null;
+      this.rating = null;
+      this.website = null;
+    }
   }
 };
 </script>
