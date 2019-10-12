@@ -11,4 +11,10 @@ describe("App.vue", () => {
     const wrapper = shallowMount(App);
     expect(wrapper.element).toMatchSnapshot();
   });
+
+  it("Check initial data", () => {
+    const wrapper = shallowMount(App);
+    expect(wrapper.vm.movies.length).toBe(0);
+    expect(wrapper.vm.onMovieListPage).toBe(false);
+  });
 });
