@@ -11,7 +11,7 @@ exports[`App.vue should match snapshot 1`] = `
   <button
     class="button"
   >
-    Add Movie
+    go to Add Movie
   </button>
    
   <listmovie-stub

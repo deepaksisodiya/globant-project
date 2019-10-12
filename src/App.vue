@@ -26,7 +26,7 @@ export default {
   computed: {
     buttonText() {
       if (this.onMovieListPage) return "Go To Movies List";
-      return "Add Movie";
+      return "go to Add Movie";
     },
     headertext() {
       if (this.onMovieListPage) return "Add Movie";
