@@ -19,7 +19,7 @@ exports[`ListMovie.vue should match snapshot with movies list 1`] = `
       </p>
        
       <p>
-        rating
+        rating/5
       </p>
     </ul>
   </ul>

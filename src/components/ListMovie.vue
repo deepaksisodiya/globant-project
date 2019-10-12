@@ -4,7 +4,7 @@
       <ul v-for="(movie, index) in movies" :key="index">
         <p>{{ movie.movieName }}</p>
         <p>{{ movie.genre }}</p>
-        <p>{{ movie.rating }}</p>
+        <p>{{ movie.rating }}/5</p>
       </ul>
     </ul>
   </div>
