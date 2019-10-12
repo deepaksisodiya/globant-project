@@ -1,6 +1,5 @@
 <template>
   <div>
-    <header>Movies List</header>
     <ul>
       <ul v-for="(movie, index) in movies" :key="index">
         <p>{{ movie.movieName }}</p>

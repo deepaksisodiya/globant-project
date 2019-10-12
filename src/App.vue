@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button @click="toggleScreen">{{ buttonText }}</button>
+    <div class="header">{{ headertext }}</div>
+    <button @click="toggleScreen" class="button">{{ buttonText }}</button>
     <ListMovie :movies="movies" v-if="!onMovieListPage" />
     <AddMovie :addNewMovie="addNewMovie" v-if="onMovieListPage" />
   </div>
@@ -26,6 +27,10 @@ export default {
     buttonText() {
       if (this.onMovieListPage) return "Go To Movies List";
       return "Add Movie";
+    },
+    headertext() {
+      if (this.onMovieListPage) return "Add Movie";
+      return "Movies List";
     }
   },
   methods: {
@@ -38,3 +43,23 @@ export default {
   }
 };
 </script>
+
+<style>
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+</style>

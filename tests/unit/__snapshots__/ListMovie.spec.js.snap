@@ -2,20 +2,12 @@
 
 exports[`ListMovie.vue should match snapshot with empty movies list 1`] = `
 <div>
-  <header>
-    Movies List
-  </header>
-   
   <ul />
 </div>
 `;
 
 exports[`ListMovie.vue should match snapshot with movies list 1`] = `
 <div>
-  <header>
-    Movies List
-  </header>
-   
   <ul>
     <ul>
       <p>

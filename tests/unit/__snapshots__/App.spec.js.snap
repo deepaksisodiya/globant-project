@@ -2,7 +2,15 @@
 
 exports[`App.vue should match snapshot 1`] = `
 <div>
-  <button>
+  <div
+    class="header"
+  >
+    Movies List
+  </div>
+   
+  <button
+    class="button"
+  >
     Add Movie
   </button>
    

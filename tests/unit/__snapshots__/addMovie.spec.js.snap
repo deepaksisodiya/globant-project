@@ -2,10 +2,6 @@
 
 exports[`AddMovie.vue should match snapshot 1`] = `
 <div>
-  <h1>
-    Add Movie to list
-  </h1>
-   
   <form>
     <!---->
      
