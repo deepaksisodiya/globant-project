@@ -9,4 +9,12 @@ describe("AddMovie.vue", () => {
     });
     expect(wrapper.isVueInstance()).toBeTruthy();
   });
+
+  it("should match snapshot", () => {
+    const addNewMovie = jest.fn();
+    const wrapper = shallowMount(AddMovie, {
+      propsData: { addNewMovie }
+    });
+    expect(wrapper.element).toMatchSnapshot();
+  });
 });

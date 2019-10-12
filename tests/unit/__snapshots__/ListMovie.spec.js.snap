@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListMovie.vue should match snapshot with empty movies list 1`] = `
+<div>
+  <header>
+    Movies List
+  </header>
+   
+  <ul />
+</div>
+`;
+
+exports[`ListMovie.vue should match snapshot with movies list 1`] = `
+<div>
+  <header>
+    Movies List
+  </header>
+   
+  <ul>
+    <ul>
+      <p>
+        movieName
+      </p>
+       
+      <p>
+        genre
+      </p>
+       
+      <p>
+        rating
+      </p>
+    </ul>
+  </ul>
+</div>
+`;
