@@ -26,15 +26,23 @@ exports[`AddMovie.vue should match snapshot 1`] = `
        
       <select>
         <option>
-          Star Wars
+          Action
         </option>
          
         <option>
-          Vanilla Sky
+          Adventure
         </option>
          
         <option>
-          Atomic Blonde
+          Comedy
+        </option>
+         
+        <option>
+          Crime
+        </option>
+         
+        <option>
+          Drama
         </option>
       </select>
     </p>

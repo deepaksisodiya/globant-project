@@ -14,9 +14,11 @@
       <p>
         <label for="genre">Genre*</label>
         <select v-model="genre">
-          <option>Star Wars</option>
-          <option>Vanilla Sky</option>
-          <option>Atomic Blonde</option>
+          <option>Action</option>
+          <option>Adventure</option>
+          <option>Comedy</option>
+          <option>Crime</option>
+          <option>Drama</option>
         </select>
       </p>
       <p>

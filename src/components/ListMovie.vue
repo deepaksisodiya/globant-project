@@ -1,11 +1,11 @@
 <template>
   <div>
     <ul>
-      <ul v-for="(movie, index) in movies" :key="index">
+      <li v-for="(movie, index) in movies" :key="index">
         <p>{{ movie.movieName }}</p>
         <p>{{ movie.genre }}</p>
         <p>{{ movie.rating }}/5</p>
-      </ul>
+      </li>
     </ul>
   </div>
 </template>
@@ -21,3 +21,15 @@ export default {
   }
 };
 </script>
+
+<style>
+ul {
+  background: #cce5ff;
+  padding: 20px;
+}
+
+ul li {
+  background: #3399ff;
+  margin: 5px;
+}
+</style>

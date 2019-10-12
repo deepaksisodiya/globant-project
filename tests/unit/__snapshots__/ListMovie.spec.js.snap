@@ -9,7 +9,7 @@ exports[`ListMovie.vue should match snapshot with empty movies list 1`] = `
 exports[`ListMovie.vue should match snapshot with movies list 1`] = `
 <div>
   <ul>
-    <ul>
+    <li>
       <p>
         movieName
       </p>
@@ -21,7 +21,7 @@ exports[`ListMovie.vue should match snapshot with movies list 1`] = `
       <p>
         rating/5
       </p>
-    </ul>
+    </li>
   </ul>
 </div>
 `;
