@@ -37,4 +37,11 @@ describe("App.vue", () => {
     });
     expect(wrapper.vm.headertext).toBe("Add Movie");
   });
+
+  it("should toggle the onMovieListPage", () => {
+    const wrapper = shallowMount(App);
+    expect(wrapper.vm.onMovieListPage).toBe(false);
+    wrapper.vm.toggleScreen();
+    expect(wrapper.vm.onMovieListPage).toBe(true);
+  });
 });
