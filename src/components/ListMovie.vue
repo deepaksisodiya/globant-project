@@ -1,11 +1,14 @@
 <template>
-  <ul>
-    <ul v-for="(movie, index) in movies" :key="index">
-      {{
-        movie.movieName
-      }}
+  <div>
+    <header>Movies List</header>
+    <ul>
+      <ul v-for="(movie, index) in movies" :key="index">
+        <p>{{ movie.movieName }}</p>
+        <p>{{ movie.genre }}</p>
+        <p>{{ movie.rating }}</p>
+      </ul>
     </ul>
-  </ul>
+  </div>
 </template>
 
 <script>
