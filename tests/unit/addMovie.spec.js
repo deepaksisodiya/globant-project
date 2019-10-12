@@ -18,7 +18,7 @@ describe("AddMovie.vue", () => {
     expect(wrapper.element).toMatchSnapshot();
   });
 
-  it("Check initial state", () => {
+  it("should check initial state", () => {
     const addNewMovie = jest.fn();
     const wrapper = shallowMount(AddMovie, {
       propsData: { addNewMovie }

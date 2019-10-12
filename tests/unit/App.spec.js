@@ -12,13 +12,13 @@ describe("App.vue", () => {
     expect(wrapper.element).toMatchSnapshot();
   });
 
-  it("Check initial data", () => {
+  it("should check initial data", () => {
     const wrapper = shallowMount(App);
     expect(wrapper.vm.movies.length).toBe(0);
     expect(wrapper.vm.onMovieListPage).toBe(false);
   });
 
-  it("Check check button text", () => {
+  it("should check check button text", () => {
     const wrapper = shallowMount(App);
     expect(wrapper.vm.onMovieListPage).toBe(false);
     expect(wrapper.vm.buttonText).toBe("go to Add Movie");
@@ -28,7 +28,7 @@ describe("App.vue", () => {
     expect(wrapper.vm.buttonText).toBe("Go To Movies List");
   });
 
-  it("Check check header text", () => {
+  it("should check header text", () => {
     const wrapper = shallowMount(App);
     expect(wrapper.vm.onMovieListPage).toBe(false);
     expect(wrapper.vm.headertext).toBe("Movies List");
@@ -43,5 +43,17 @@ describe("App.vue", () => {
     expect(wrapper.vm.onMovieListPage).toBe(false);
     wrapper.vm.toggleScreen();
     expect(wrapper.vm.onMovieListPage).toBe(true);
+  });
+
+  it("should add movie to movies array", () => {
+    const wrapper = shallowMount(App);
+    expect(wrapper.vm.movies.length).toBe(0);
+    wrapper.vm.addNewMovie({
+      movieName: "kaho na pyar he",
+      genre: "romantic",
+      rating: 5,
+      website: "www.random.com"
+    });
+    expect(wrapper.vm.movies.length).toBe(1);
   });
 });
